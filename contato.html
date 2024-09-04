@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Formulário de Contato</title>
+<style>
+.error {
+  color: red;
+}
+</style>
+</head>
+<body>
+
+<h2>Formulário de Contato</h2>
+
+<form id="contactForm" onsubmit="return validateForm()">
+  <label for="name">Nome:</label><br>
+  <input type="text" id="name" name="name" required><br>
+  <span class="error" id="nameError"></span><br>
+
+  <label for="email">Email:</label><br>
+  <input type="email" id="email" name="email" required><br>
+  <span class="error" id="emailError"></span><br>
+
+  <label for="message">Mensagem:</label><br>
+  <textarea id="message" name="message" required></textarea><br>
+  <span class="error" id="messageError"></span><br><br>
+
+  <input type="submit" value="Enviar">
+</form>
+
+<script>
+function validateForm() {
+  let name = document.getElementById("name").value;
+  let email = document.getElementById("email").value;
+  let message = document.getElementById("message").value;
+  let valid = true;
+
+  // Validação do nome
+  if (name == "") {
+    document.getElementById("nameError").innerHTML = "Por favor, digite seu nome.";
+    valid = false;
+  } else {
+    document.getElementById("nameError").innerHTML = "";
+  }
+
+  // Validação do email
+  if (email == "") {
+    document.getElementById("emailError").innerHTML = "Por favor, digite seu email.";
+    valid = false;
+  } else if (!/\S+@\S+\.\S+/.test(email)) {
+    document.getElementById("emailError").innerHTML = "Por favor, digite um email válido.";
+    valid = false;
+  } else {
+    document.getElementById("emailError").innerHTML = "";
+  }
+
+  // Validação da mensagem
+  if (message == "") {
+    document.getElementById("messageError").innerHTML = "Por favor, digite sua mensagem.";
+    valid = false;
+  } else {
+    document.getElementById("messageError").innerHTML = "";
+  }
+
+  return valid;
+}
+</script>
+
+</body>
+</html>
