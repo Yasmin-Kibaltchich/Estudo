@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Devers</title>
-    <link rel="stylesheet" href="developers.css"> 
+    <title>The project</title>
+    <link rel="stylesheet" href="the_project.css"> 
         <script>
           window.onload = function() {
          // Crie um elemento para a notificação
@@ -24,7 +24,7 @@
 <body> 
   
     <div>
-        <section class="banner"><h1>Developers</h1></section>
+        <section class="banner"><h1>The project</h1></section>
     </div> 
     
 </body>
