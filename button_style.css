@@ -1,4 +1,7 @@
-body { background-image: url(imagens/backgriund_button.jpg);
+body { background-image: url(imagens/new\ \(1\).jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-x: center;
     font-family: sans-serif;
     display: flex;
     flex-direction: column;
@@ -30,7 +33,7 @@ body { background-image: url(imagens/backgriund_button.jpg);
     background-color: #2ec033;
     color: white;
     border: none;
-    border-radius: 4px;
+    border-radius: %;
     cursor: pointer;
     margin-top: 10px;
   }
@@ -38,3 +41,18 @@ body { background-image: url(imagens/backgriund_button.jpg);
   button:hover {
     background-color: #45a049;
   }
+   /* Formatação para telas menores (responsivo) */
+   @media (max-width: 768px) {
+    nav {
+      padding: 0.5em;
+    }
+    nav a {
+      margin: 0 10px; 
+      font-size: 1em;
+    }
+    .banner h1 {
+      font-size: 2em;
+    }
+  }
+
+  
