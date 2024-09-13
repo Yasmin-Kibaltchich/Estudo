@@ -35,16 +35,75 @@ body { background-image: url("imagens/new\ \(1\).jpg");
       width: 100%;
     }
   }
-  /* Formatação para telas menores (responsivo) */
-@media (max-width: 768px) {
-  nav {
-    padding: 0.5em;
-  }
-  nav a {
-    margin: 0 10px; 
-    font-size: 1em;
-  }
-  .banner h1 {
-    font-size: 2em;
-  }
+ /* Importa Google Font - Open Sans */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+/* Reset de estilos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.6;
+}
+
+/* Container principal */
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* Estilos gerais */
+h1, h2, h3 {
+    font-weight: 700;
+}
+
+/* Seção Hero */
+.hero {
+    background-color: #f4f4f4;
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+/* Seção Conteúdo */
+.conteudo {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr); /* 1 coluna em telas pequenas */
+    gap: 2rem;
+}
+
+/* Card */
+.card {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Rodapé */
+.rodape {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+/* Media Queries para Responsividade */
+
+/* Telas médias (tablets) */
+@media (min-width: 768px) {
+    .conteudo {
+        grid-template-columns: repeat(2, 1fr); /* 2 colunas em telas médias */
+    }
+}
+
+/* Telas grandes (desktops) */
+@media (min-width: 992px) {
+    .conteudo {
+        grid-template-columns: repeat(3, 1fr); /* 3 colunas em telas grandes */
+    }
 }
